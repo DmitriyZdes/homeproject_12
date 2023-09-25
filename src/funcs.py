@@ -1,6 +1,5 @@
 import json
 
-
 def load_operations():
     """Выводит на экран список из 5 последних выполненных операций"""
 
@@ -33,5 +32,5 @@ def filter_sorted_operations(operations):
     """Сортирует список выполненных операций"""
 
     operations = [operation for operation in operations if operation.get("state") == "EXECUTED"]
-    operations = sorted(operations, key= lambda x: x["date"], reverse=True)
+    operations = sorted(operations, key=lambda x: x["date"], reverse=True)
     return operations
